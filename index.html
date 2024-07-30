@@ -43,27 +43,22 @@
 
         main {
             padding: 20px;
-            max-width: 1200px; /* Increased max-width for two-column layout */
+            max-width: 1200px;
             margin: auto;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: flex;
-            gap: 20px; /* Space between columns */
-            flex-wrap: wrap;
-        }
-
-        .iframe-container, .content {
-            flex: 1; /* Both columns will take equal width */
-            min-width: 300px; /* Ensure a minimum width for smaller screens */
-        }
-
-        .iframe-container {
-            flex: 1 1 40%; /* Adjust the flex-basis to control column width */
+            gap: 20px;
         }
 
         .content {
-            flex: 1 1 60%; /* Adjust the flex-basis to control column width */
+            flex: 2; /* Takes twice the space of iframe */
+        }
+
+        .iframe-container {
+            flex: 1; /* Takes half the space of content */
+            max-width: 640px; /* Limit max width for iframe */
         }
 
         iframe {
@@ -102,9 +97,6 @@
             padding: 10px;
             text-align: center;
             border-top: 2px solid #0056b3;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
         }
 
         footer p {
@@ -132,10 +124,6 @@
     </header>
 
     <main>
-        <div class="iframe-container">
-            <!-- Embed Google Form -->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdo5U-lyO7GwZNxnG23E8O1bLaajz_IlB91k6mClz7729-R7A/viewform?embedded=true" width="640" height="1180" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
         <div class="content">
             <section id="summary">
                 <h2>Summary</h2>
@@ -223,6 +211,10 @@
                     <p><strong>Email:</strong> <a href="mailto:shreyapaniyoor@gmail.com">shreyapaniyoor@gmail.com</a></p>
                 </div>
             </section>
+        </div>
+        <div class="iframe-container">
+            <!-- Embed Google Form -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdo5U-lyO7GwZNxnG23E8O1bLaajz_IlB91k6mClz7729-R7A/viewform?embedded=true" width="640" height="1180" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     </main>
 
