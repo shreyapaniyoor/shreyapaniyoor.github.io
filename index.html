@@ -43,11 +43,33 @@
 
         main {
             padding: 20px;
-            max-width: 800px;
+            max-width: 1200px; /* Increased max-width for two-column layout */
             margin: auto;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px; /* Space between columns */
+            flex-wrap: wrap;
+        }
+
+        .iframe-container, .content {
+            flex: 1; /* Both columns will take equal width */
+            min-width: 300px; /* Ensure a minimum width for smaller screens */
+        }
+
+        .iframe-container {
+            flex: 1 1 40%; /* Adjust the flex-basis to control column width */
+        }
+
+        .content {
+            flex: 1 1 60%; /* Adjust the flex-basis to control column width */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%; /* Use height percentage to fit within container */
+            border: none;
         }
 
         section {
@@ -110,96 +132,102 @@
     </header>
 
     <main>
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>Recent Computer Science graduate with a Micro Degree in Python Full Stack Development. Passionate about web development and eager to join a dynamic team. Skilled in creating and maintaining full-stack applications using Python and Django, with practical experience in various front-end and back-end technologies. Seeking to leverage my skills as a Python Full Stack Developer in a professional setting.</p>
-        </section>
+        <div class="iframe-container">
+            <!-- Embed Google Form -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdo5U-lyO7GwZNxnG23E8O1bLaajz_IlB91k6mClz7729-R7A/viewform?embedded=true" width="640" height="1180" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <div class="content">
+            <section id="summary">
+                <h2>Summary</h2>
+                <p>Recent Computer Science graduate with a Micro Degree in Python Full Stack Development. Passionate about web development and eager to join a dynamic team. Skilled in creating and maintaining full-stack applications using Python and Django, with practical experience in various front-end and back-end technologies. Seeking to leverage my skills as a Python Full Stack Developer in a professional setting.</p>
+            </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Bachelor of Computer Application (BCA)</h3>
-                <p><strong>Govinda Dasa College, Surathkal</strong></p>
-                <p>September 2021 - June 2024</p>
-            </div>
-            <div class="education-item">
-                <h3>PUC (Science-PCMS)</h3>
-                <p><strong>Poorna Prajna PU College, Admar</strong></p>
-                <p>June 2019 - April 2021</p>
-            </div>
-            <div class="education-item">
-                <h3>SSLC</h3>
-                <p><strong>Poorna Prajna KM High School, Admar</strong></p>
-                <p>2019</p>
-            </div>
-        </section>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Bachelor of Computer Application (BCA)</h3>
+                    <p><strong>Govinda Dasa College, Surathkal</strong></p>
+                    <p>September 2021 - June 2024</p>
+                </div>
+                <div class="education-item">
+                    <h3>PUC (Science-PCMS)</h3>
+                    <p><strong>Poorna Prajna PU College, Admar</strong></p>
+                    <p>June 2019 - April 2021</p>
+                </div>
+                <div class="education-item">
+                    <h3>SSLC</h3>
+                    <p><strong>Poorna Prajna KM High School, Admar</strong></p>
+                    <p>2019</p>
+                </div>
+            </section>
 
-        <section id="technical-skills">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Python, JavaScript, Java, VB.NET, PHP, C</li>
-                <li><strong>Web Technologies:</strong> HTML, CSS, Django, JavaScript</li>
-                <li><strong>Database Management:</strong> MS Access</li>
-            </ul>
-        </section>
+            <section id="technical-skills">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Python, JavaScript, Java, VB.NET, PHP, C</li>
+                    <li><strong>Web Technologies:</strong> HTML, CSS, Django, JavaScript</li>
+                    <li><strong>Database Management:</strong> MS Access</li>
+                </ul>
+            </section>
 
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Programming with VB.NET Basics</li>
-                <li>HTML & CSS for eCommerce Websites</li>
-                <li>Android Application Development</li>
-            </ul>
-        </section>
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Programming with VB.NET Basics</li>
+                    <li>HTML & CSS for eCommerce Websites</li>
+                    <li>Android Application Development</li>
+                </ul>
+            </section>
 
-        <section id="projects">
-            <h2>Personal Projects</h2>
-            <div class="project-item">
-                <h3>Canteen Management System</h3>
-                <p>Developed a Windows-based application using VB.NET and MS Access to manage resources and streamline operations for a college canteen.</p>
-            </div>
-            <div class="project-item">
-                <h3>Library Management System</h3>
-                <p>Designed a system using Python and Django to track book inventory and manage member information.</p>
-            </div>
-            <div class="project-item">
-                <h3>E-Commerce Website</h3>
-                <p>Built an e-commerce website with HTML, CSS, and JavaScript, including features like payment gateway integration.</p>
-            </div>
-        </section>
+            <section id="projects">
+                <h2>Personal Projects</h2>
+                <div class="project-item">
+                    <h3>Canteen Management System</h3>
+                    <p>Developed a Windows-based application using VB.NET and MS Access to manage resources and streamline operations for a college canteen.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Library Management System</h3>
+                    <p>Designed a system using Python and Django to track book inventory and manage member information.</p>
+                </div>
+                <div class="project-item">
+                    <h3>E-Commerce Website</h3>
+                    <p>Built an e-commerce website with HTML, CSS, and JavaScript, including features like payment gateway integration.</p>
+                </div>
+            </section>
 
-        <section id="languages">
-            <h2>Languages</h2>
-            <ul>
-                <li>Kannada (Native)</li>
-                <li>English (Fluent)</li>
-                <li>Hindi (Proficient)</li>
-            </ul>
-        </section>
+            <section id="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li>Kannada (Native)</li>
+                    <li>English (Fluent)</li>
+                    <li>Hindi (Proficient)</li>
+                </ul>
+            </section>
 
-        <section id="interests">
-            <h2>Interests</h2>
-            <ul>
-                <li>Building innovative projects</li>
-                <li>Reading books</li>
-                <li>Listening to music</li>
-                <li>Contributing to open-source projects</li>
-                <li>Attending tech meetups and conferences</li>
-            </ul>
-        </section>
+            <section id="interests">
+                <h2>Interests</h2>
+                <ul>
+                    <li>Building innovative projects</li>
+                    <li>Reading books</li>
+                    <li>Listening to music</li>
+                    <li>Contributing to open-source projects</li>
+                    <li>Attending tech meetups and conferences</li>
+                </ul>
+            </section>
 
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <div class="contact-info">
-                <p><strong>Address:</strong> Siddi Nilaya, Paniyoor Post, Belapu Village, Udupi - 574117</p>
-                <p><strong>Mobile:</strong> 7411129938</p>
-                <p><strong>Email:</strong> <a href="mailto:shreyapaniyoor@gmail.com">shreyapaniyoor@gmail.com</a></p>
-            </div>
-        </section>
+            <section id="contact">
+                <h2>Contact Information</h2>
+                <div class="contact-info">
+                    <p><strong>Address:</strong> Siddi Nilaya, Paniyoor Post, Belapu Village, Udupi - 574117</p>
+                    <p><strong>Mobile:</strong> 7411129938</p>
+                    <p><strong>Email:</strong> <a href="mailto:shreyapaniyoor@gmail.com">shreyapaniyoor@gmail.com</a></p>
+                </div>
+            </section>
+        </div>
     </main>
 
-<!--     <footer>
+    <footer>
         <p>&copy; 2024 Shreya N. All rights reserved.</p>
-    </footer> -->
+    </footer>
 </body>
 </html>
